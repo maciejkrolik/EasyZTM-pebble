@@ -4,7 +4,7 @@
         ""
     ],
     "companyName": "macioo23@gmail.com",
-    "longName": "EasyZTM",
+    "longName": "EasyZTM V2",
     "projectType": "simplyjs",
     "resources": {
         "media": [
@@ -26,10 +26,10 @@
             }
         ]
     },
-    "shortName": "EasyZTM",
-    "uuid": "783a2db3-2841-49a9-94e2-b9ff23f92a54",
+    "shortName": "EasyZTM V2",
+    "uuid": "60acbc7b-1045-4ea4-af15-27e9a9426c94",
     "versionCode": 1,
-    "versionLabel": "1.1",
+    "versionLabel": "2.0",
     "watchapp": {
         "watchface": false
     }

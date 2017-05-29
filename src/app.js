@@ -1,54 +1,7 @@
-var getData = function(link){
-  ajax({
-    url: link, 
-    type: 'json'
-  },
-  function(data) {
-    console.log('Got data');
-    simply.vibe('short');
-    
-    var downloaded_string = JSON.stringify(data);
-    var downloaded_data = JSON.parse(downloaded_string);
-    
-    var bus_number = downloaded_data.feed.entry[0].gsx$linia.$t;
-    var bus_number2 = downloaded_data.feed.entry[1].gsx$linia.$t;
-    var bus_number3 = downloaded_data.feed.entry[2].gsx$linia.$t;
-    var direction = downloaded_data.feed.entry[0].gsx$kierunek.$t;
-    var direction2 = downloaded_data.feed.entry[1].gsx$kierunek.$t;
-    var direction3 = downloaded_data.feed.entry[2].gsx$kierunek.$t;
-    var departure = downloaded_data.feed.entry[0].gsx$odjazd.$t;
-    if(departure === '')
-      departure = 'Odjeżdża!';
-    var departure2 = downloaded_data.feed.entry[1].gsx$odjazd.$t;
-    if(departure2 === '')
-      departure = 'Odjeżdża!';
-    var departure3 = downloaded_data.feed.entry[2].gsx$odjazd.$t;
-    
-    var line = "\n----------------------\n";
-    
-    if(bus_number !== '')
-      {
-        simply.setText({body: bus_number + ' ' + departure + ' ' + direction + 
-                    line + 
-                    bus_number2 + ' ' + departure2 + ' ' + direction2 + 
-                    line + 
-                    bus_number3 + ' ' + departure3 + ' ' + direction3});
-      }
-    else
-      {
-        simply.setText({body: 'Aktualnie brak przejazdów!'});
-      }
- },
- function (error) {
-   simply.setText({body: 'Brak połączenia'});
- }
-);
-};
-
-//First station link
-var link1 = 'https://spreadsheets.google.com/feeds/list/1yGXpibApxGKPClsTlG-Jay_ZW46jRVm3UGhgMg_t630/od6/public/values?alt=json';
-//Second station link
-var link2 = 'https://spreadsheets.google.com/feeds/list/1EL9O1WX4oCV-PHJxt9qQqg2QBrOijWH2NvchS0HuNnE/od6/public/values?alt=json';
+// First station link
+var link1 = 'http://87.98.237.99:88/delays?stopId=1349';
+// Second station link
+var link2 = 'http://87.98.237.99:88/delays?stopId=1981';
 
 // Initialize the screen
 simply.scrollable(true);
@@ -67,3 +20,66 @@ simply.on('longClick', function(e) {
   getData(link2);
   console.log('Long button clicked');
 });
+
+// Main function to get data from the internet
+function getData(link){
+  ajax({
+    url: link, 
+    type: 'json'
+  },
+  function(data) {
+    console.log('Got data');
+    simply.vibe('short');
+    
+    var downloadedData = JSON.parse(JSON.stringify(data));
+    
+    var numberOfBuses = length(downloadedData.delay);
+    if(numberOfBuses === 0)
+      {
+        simply.setText({body: 'Aktualnie brak połączeń dla wybranego przystanku!'});
+        return;
+      }
+    
+    // Preparing text to display on a watch
+    var line = "\n----------------------\n";
+    var text = '';
+    
+    for(var i = 0; i < numberOfBuses; i++)
+      {
+        var busNumber = downloadedData.delay[i].routeId;
+        text += busNumber + ' - ';
+        var estimatedTime = calculateTime(downloadedData.delay[i].estimatedTime);
+        text += estimatedTime;
+        var headSign = downloadedData.delay[i].headsign;
+        text += headSign + line;
+      }
+    
+    simply.setText({body: text});
+    
+  },
+  function (error) {
+    simply.vibe('short');
+    simply.setText({body: 'Brak połączenia z siecią!'});
+  }
+ );
+}
+
+// Function to count current number of buses available in JSON
+function length(obj) {
+  return Object.keys(obj).length;
+}
+
+// Function to calculate time from now
+function calculateTime(obj) {
+  var date = new Date();
+  var exit = obj.slice(3, 5) - date.getMinutes();
+  
+  if(exit < 10 && exit > 0)
+    exit += ' min   ';
+  else if(exit === 0)
+    exit = 'Odjazd!';
+  else
+    exit = obj + '    ';
+  
+  return exit;
+}
