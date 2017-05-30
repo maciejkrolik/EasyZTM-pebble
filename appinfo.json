@@ -3,8 +3,8 @@
     "capabilities": [
         ""
     ],
-    "companyName": "macioo23@gmail.com",
-    "longName": "EasyZTM V2",
+    "companyName": "Maciej Krolik",
+    "longName": "EasyZTM",
     "projectType": "simplyjs",
     "resources": {
         "media": [
@@ -26,10 +26,10 @@
             }
         ]
     },
-    "shortName": "EasyZTM V2",
+    "shortName": "EasyZTM",
     "uuid": "60acbc7b-1045-4ea4-af15-27e9a9426c94",
     "versionCode": 1,
-    "versionLabel": "2.0",
+    "versionLabel": "2.1",
     "watchapp": {
         "watchface": false
     }

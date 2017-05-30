@@ -21,7 +21,7 @@ simply.on('longClick', function(e) {
   console.log('Long button clicked');
 });
 
-// Main function to get data from the internet
+// Getting data from the internet
 function getData(link){
   ajax({
     url: link, 
@@ -64,22 +64,22 @@ function getData(link){
  );
 }
 
-// Function to count current number of buses available in JSON
+// Counting current number of buses available in JSON
 function length(obj) {
   return Object.keys(obj).length;
 }
 
-// Function to calculate time from now
+// Transforming time data
 function calculateTime(obj) {
   var date = new Date();
-  var exit = obj.slice(3, 5) - date.getMinutes();
+  var modTime = Math.abs(obj.slice(3, 5) - date.getMinutes());
   
-  if(exit < 10 && exit > 0)
-    exit += ' min   ';
-  else if(exit === 0)
-    exit = 'Odjazd!';
+  if(modTime < 10 && modTime > 0)
+    modTime += ' min   ';
+  else if(modTime === 0)
+    modTime = 'Odjazd!   ';
   else
-    exit = obj + '    ';
+    modTime = obj + '    ';
   
-  return exit;
+  return modTime;
 }
