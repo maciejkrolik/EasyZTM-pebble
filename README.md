@@ -1,5 +1,6 @@
 # EasyZTM
-EasyZTM is an SimplyJS app for Pebble smartwatch. It shows a real departure time from previously seleceted bus stops in Gdańsk, Poland.
+EasyZTM is an SimplyJS app for the Pebble smartwatch. It shows a real departure time from previously seleceted bus stops in Gdańsk, Poland.
 
-![alt text](https://xe3wzw.dm2302.livefilestore.com/y4mCzwSSIErYEOO-ysBGJEupEqGP_EYqPiwP5MFJzzbJTo545uNL_gwZhTlnU7VNdUUuNZqS4lS4dABU4Sz3zAinCg6DT7ZqZ563N5JQqPXYxHscYTC2JgFSyps1dzLfpVXmGQZV1RaCqngOEJdkawM5lFPROkV55yIfmx-yS_fEET4g5U_6-x3YoXL6pYWqjcFvPT2pbCn3WtG5CvudG-ymA?width=145&height=169&cropmode=none)
-![alt text](https://vu2lra.dm2302.livefilestore.com/y4mQkcAVmp9HxNgTxjRxfhTL8BfCFU8HL57wMng9EEkW1pqWLYJo4ZFw0SvVFaP6eK1wP4TliPvT7mWKH8283Bi1Lonf2iyaMmIvMm0HX-oIk5DPuO_LVmxD0IxuoyjxXhN1Gcp_XY_VLofyE2STqujKudigEnfX4zzWej81sbG4XNVusx-mlWVcu-egGTw8RGMFyVMXhzSA5KGGmPoqWpSYA?width=145&height=169&cropmode=none)
+![alt text](https://xe0ykw.dm2302.livefilestore.com/y4mLSLoBj1UScBlmiRuneiHZpFSmuBQCW6O7LbIHmG-QQ2FGscugkNEqyFg5U3AYFT_zxOLuu9ME0f23l0up4O17vNiohXFzGuFQyhiLs4UNtQfH-v9ypkkgp63SD15ORlmGiWN4LPuvtFQqvcIUv0NWebhwW8DYHN_2McxpUuSnYanzY-MmWvkMsdumuei3oztI6os9-eo-Mev79I5wKfYeA?width=144&height=168&cropmode=none)
+![alt text](https://xu0ykw.dm2302.livefilestore.com/y4mw-r_bmoCVCgTd6wkPyTYV1i24T5ptuUzJMHsSmXsVCOntclthTngHqEV75zw1s2DCSLJ1uO8EfqLeJWH3vXTPzwb03baTTkITUUa1reOulJK-1C0SL1aZpRhuhXUzMDkybqUpjOaC99cvynbvMpXb6yw-bcXYqQgEsrJL1bQ3_u2ciu-r7fuSbW9NVEGQgRSv0mXXiXadTPPEgr2ba23RQ?width=144&height=168&cropmode=none)
+![alt text](https://vu2znw.dm2302.livefilestore.com/y4mK3wNyV5kfjsN2IlASeUM-x4fmlV490w_bVNEyKpYUwLV7w8uUwUJxpXriX9N1tF5BEI8A1is1QYL_OG78VW1HiPYSDfbZOinqnNPoh3lnaEo1TILMPmJ5jC9Eb-UV9kAwi-JaVPMwqsCTCmhYOYDt4hH78J34YbU973BMNcAeY29uBKKIjRN_GGJ-Rx4L8x1OzT69UNUYUAuVksxYLskog?width=144&height=168&cropmode=none)
