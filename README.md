@@ -1,5 +1,5 @@
 # EasyZTM
-EasyZTM is an SimplyJS app for the Pebble smartwatch. It shows a real departure time from previously seleceted bus stops in Gdańsk, Poland.
+EasyZTM is an SimplyJS app for the Pebble smartwatch. It shows a real departure time from previously selected bus stops in Gdańsk, Poland.
 
 ![alt text](https://xe0ykw.dm2302.livefilestore.com/y4mLSLoBj1UScBlmiRuneiHZpFSmuBQCW6O7LbIHmG-QQ2FGscugkNEqyFg5U3AYFT_zxOLuu9ME0f23l0up4O17vNiohXFzGuFQyhiLs4UNtQfH-v9ypkkgp63SD15ORlmGiWN4LPuvtFQqvcIUv0NWebhwW8DYHN_2McxpUuSnYanzY-MmWvkMsdumuei3oztI6os9-eo-Mev79I5wKfYeA?width=144&height=168&cropmode=none)
 ![alt text](https://xu0ykw.dm2302.livefilestore.com/y4mw-r_bmoCVCgTd6wkPyTYV1i24T5ptuUzJMHsSmXsVCOntclthTngHqEV75zw1s2DCSLJ1uO8EfqLeJWH3vXTPzwb03baTTkITUUa1reOulJK-1C0SL1aZpRhuhXUzMDkybqUpjOaC99cvynbvMpXb6yw-bcXYqQgEsrJL1bQ3_u2ciu-r7fuSbW9NVEGQgRSv0mXXiXadTPPEgr2ba23RQ?width=144&height=168&cropmode=none)
