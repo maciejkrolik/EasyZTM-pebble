@@ -29,7 +29,7 @@
     "shortName": "EasyZTM",
     "uuid": "60acbc7b-1045-4ea4-af15-27e9a9426c94",
     "versionCode": 1,
-    "versionLabel": "2.1",
+    "versionLabel": "2.2",
     "watchapp": {
         "watchface": false
     }

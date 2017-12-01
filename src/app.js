@@ -1,7 +1,7 @@
 // First station link
-var link1 = 'http://87.98.237.99:88/delays?stopId=1349';
+var link1 = 'http://87.98.237.99:88/delays?stopId=1981';
 // Second station link
-var link2 = 'http://87.98.237.99:88/delays?stopId=1981';
+var link2 = 'http://87.98.237.99:88/delays?stopId=1349';
 
 // Initialize the screen
 simply.scrollable(true);
@@ -72,11 +72,26 @@ function length(obj) {
 // Transforming time data
 function calculateTime(obj) {
   var date = new Date();
-  var modTime = Math.abs(obj.slice(3, 5) - date.getMinutes());
+  var modTime;
   
+  if(obj.slice(3, 5) < date.getMinutes())
+    {
+      modTime = 60 - date.getMinutes() + parseInt(obj.slice(3, 5));
+      
+      return transformModTime(modTime, obj);
+    }
+  else
+    {
+      modTime = obj.slice(3, 5) - date.getMinutes();
+      
+      return transformModTime(modTime, obj);
+    }
+}
+
+function transformModTime(modTime, obj) {
   if(modTime < 10 && modTime > 0)
     modTime += ' min   ';
-  else if(modTime === 0)
+  else if(modTime == 0)
     modTime = 'Odjazd!   ';
   else
     modTime = obj + '    ';
